@@ -14,6 +14,8 @@ public class Runner {
 
         while(p.gameOn && o.gameOn){
             boolean validShot = false;
+            o.checkGame();
+            p.checkGame();
 
             while(!validShot){
 
@@ -46,6 +48,9 @@ public class Runner {
                 p.handleMove(shot);
                 o.checkGame();
                 p.checkGame();
+                if(p.gameOn==false || o.gameOn==false){
+                    break;
+                }
 
             }
 
