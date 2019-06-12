@@ -61,13 +61,13 @@ public class Runner {
     public static boolean validateInput(String input) {
 
         if(input.length()<3){
-            return false;
+            return true;
         }
         if(input.matches("^[1-9,10]+$")){
             return false;
         }
 
-        return true;
+        return false;
     }
 
 }
